@@ -67,8 +67,7 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void) delayMethod {
-    
+- (void)delayMethod {
     [self.bar1 moveToStep:1];
     [self.bar2 moveToStep:8];
     [self.bar3 moveToStep:0];

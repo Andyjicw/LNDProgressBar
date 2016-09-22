@@ -39,7 +39,7 @@
         self.current         = currentStep;
         self.tintColor       = tintColor;
         self.currentColor    = currentColor;
-        self.layer.masksToBounds = YES;
+        self.layer.masksToBounds = true;
         self.layer.borderWidth   = 0.5;
         self.layer.borderColor   = [UIColor clearColor].CGColor;
         self.layer.cornerRadius  = 0;
@@ -51,7 +51,7 @@
     return self;
 }
 
-- (void) setUI {
+- (void)setUI {
     CGFloat width = (self.frame.size.width - self.total + 1) / self.total;
     for (int i = 0; i < self.total; i++) {
         CGPoint startP = CGPointMake((width + 1) * i, 0);
@@ -65,7 +65,7 @@
     }
 }
 
-- (void) addLine:(CGPoint)startPoint end:(CGPoint)endPoint color:(UIColor *)color {
+- (void)addLine:(CGPoint)startPoint end:(CGPoint)endPoint color:(UIColor *)color {
     
     CAShapeLayer *layer = [CAShapeLayer layer];
     layer.lineWidth     = self.frame.size.height * 2;
@@ -77,7 +77,7 @@
     [self.layer addSublayer:layer];
 }
 
-- (void) moveToStep:(NSUInteger)currentStep {
+- (void)moveToStep:(NSUInteger)currentStep {
     self.current = currentStep;
     [self setUI];
 }

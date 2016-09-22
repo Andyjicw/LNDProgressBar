@@ -20,6 +20,6 @@
                     tintColor:(UIColor *)tintColor
                  currentColor:(UIColor *)currentColor;
 
-- (void) moveToStep:(NSUInteger)currentStep;
+- (void)moveToStep:(NSUInteger)currentStep;
 
 @end
